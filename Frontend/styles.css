@@ -1,0 +1,378 @@
+/* ===================== GLOBAL STYLES ===================== */
+/* These apply to the entire page */
+
+/* Remove default spacing browsers add, and use border-box sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set default font and background for the whole page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Remove underline and set default color for all links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove bullet points from all lists */
+ul {
+    list-style: none;
+}
+
+
+/* ===================== BUTTONS ===================== */
+/* Two button styles used across the whole site */
+
+/* Solid filled button */
+.btn-primary {
+    background-color: #6c63ff;   /* purple */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    display: inline-block;
+}
+
+/* Bordered button with no fill */
+.btn-outline {
+    background-color: transparent;
+    color: #6c63ff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 2px solid #6c63ff;
+    cursor: pointer;
+    font-size: 15px;
+    display: inline-block;
+}
+
+
+/* ===================== NAVBAR ===================== */
+/* Top navigation bar */
+
+.navbar {
+    display: flex;              /* Put items in a row */
+    justify-content: space-between;  /* Space them out left to right */
+    align-items: center;        /* Vertically center them */
+    padding: 15px 40px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;  /* Light line at the bottom */
+    position: sticky;           /* Stays at the top when you scroll */
+    top: 0;
+    z-index: 100;               /* Sits above other elements */
+}
+
+/* Logo text style */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6c63ff;
+}
+
+/* Navigation links in a row */
+.nav-links {
+    display: flex;
+    gap: 25px;                  /* Space between each link */
+}
+
+.nav-links a {
+    font-size: 15px;
+    color: #333;
+}
+
+/* Hover effect on nav links */
+.nav-links a:hover {
+    color: #6c63ff;
+}
+
+/* Login and Signup buttons side by side */
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+
+/* ===================== HERO SECTION ===================== */
+/* The big banner at the top of the page */
+
+.hero {
+    display: flex;              /* Side by side: text on left, image on right */
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px;
+    background-color: #f0eeff;  /* Light purple background */
+    gap: 40px;
+}
+
+/* Left side text */
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.hero-text p {
+    font-size: 17px;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;           /* Space between lines of text */
+}
+
+/* Two buttons side by side */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Right side image placeholder */
+.image-box {
+    width: 400px;
+    height: 280px;
+    background-color: #c5c0f5;  /* Purple placeholder */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c63ff;
+    font-size: 18px;
+}
+
+
+/* ===================== SEARCH SECTION ===================== */
+/* Search bar and filter tags */
+
+.search-section {
+    padding: 30px 40px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;            /* Wrap to next line on small screens */
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* The text input field */
+.search-section input {
+    padding: 10px 15px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 300px;
+}
+
+/* Filter tag row */
+.filter-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Each filter tag */
+.tag {
+    padding: 6px 14px;
+    border-radius: 20px;        /* Pill shape */
+    border: 1px solid #ccc;
+    font-size: 13px;
+    cursor: pointer;
+    color: #555;
+}
+
+/* Active (selected) tag */
+.tag.active {
+    background-color: #6c63ff;
+    color: white;
+    border-color: #6c63ff;
+}
+
+
+/* ===================== EXPLORE SECTION ===================== */
+/* Grid of hobby cards */
+
+.explore-section {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.explore-section h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.explore-section p {
+    color: #666;
+    margin-bottom: 35px;
+}
+
+/* Grid layout — 3 cards per row */
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 equal columns */
+    gap: 25px;
+    text-align: left;
+}
+
+/* Single hobby card */
+.hobby-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;           /* Clip image to card corners */
+    border: 1px solid #e0e0e0;
+}
+
+/* Image placeholder inside card */
+.card-image {
+    height: 150px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+}
+
+/* Text area inside card */
+.card-body {
+    padding: 15px;
+}
+
+.card-body h3 {
+    margin: 8px 0 5px;
+}
+
+.card-body p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+/* Small colored label (e.g. "Outdoor", "Music") */
+.badge {
+    background-color: #ede9ff;
+    color: #6c63ff;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+
+/* ===================== HOW IT WORKS SECTION ===================== */
+/* 4 step cards in a row */
+
+.steps-section {
+    padding: 60px 40px;
+    background-color: #f0eeff;
+    text-align: center;
+}
+
+.steps-section h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.steps-section p {
+    color: #666;
+    margin-bottom: 35px;
+}
+
+/* Grid — 4 steps in a row */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Single step card */
+.step {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px 20px;
+    border: 1px solid #ddd;
+}
+
+/* Big number at top of each step */
+.step-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #6c63ff;
+    margin-bottom: 10px;
+}
+
+.step h3 {
+    margin-bottom: 8px;
+}
+
+.step p {
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* ===================== FOOTER ===================== */
+/* Bottom section of the page */
+
+.footer {
+    background-color: #222;     /* Dark background */
+    color: #ccc;
+    padding: 50px 40px 20px;
+}
+
+/* 4 columns side by side */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;  /* Brand column is wider */
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-brand h3 {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-col h4 {
+    color: white;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+/* Footer links list */
+.footer-col ul {
+    display: flex;
+    flex-direction: column;     /* Stack links vertically */
+    gap: 8px;
+}
+
+.footer-col a {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.footer-col a:hover {
+    color: white;
+}
+
+/* Copyright bar at the very bottom */
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #888;
+}
